@@ -1,6 +1,14 @@
 defmodule KeyValueStore.RedisClient do
   require Logger  # Import Logger module for logging
 
+  @doc """
+  Low-level interaction with Redis.
+
+  This module provides functions to establish connections and directly interact with Redis.
+
+  For higher-level operations, see `KeyValueStore.Storage` module.
+  """
+
   @redis_host Application.compile_env(:key_value_store, Mix.env())[:redis_host]  # Default Redis host
   @redis_port Application.compile_env(:key_value_store, Mix.env())[:redis_port]  # Default Redis port
 
