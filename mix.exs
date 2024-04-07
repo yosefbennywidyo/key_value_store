@@ -16,8 +16,8 @@ defmodule KeyValueStore.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :ssl],     # Extra applications needed for this application
-      application: [KeyValueStore.Application] # Main application module
+      extra_applications: [:logger, :ssl],      # Extra applications needed for this application
+      application: [KeyValueStore.Application]  # Main application module
     ]
   end
 
@@ -25,7 +25,7 @@ defmodule KeyValueStore.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:redix, "~> 0.8.0"}   # Dependency on the Redix library for Redis interaction
+      {:redix, "~> 1.4"},   # Dependency on the Redix library for Redis interaction
     ]
   end
 end
